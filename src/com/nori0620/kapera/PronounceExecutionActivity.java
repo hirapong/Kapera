@@ -12,7 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-public class PronounceExecution extends Activity {
+public class PronounceExecutionActivity extends Activity {
 	private static final int REQUEST_CODE = 0;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class PronounceExecution extends Activity {
                   Intent intent = new Intent(
                           RecognizerIntent.ACTION_RECOGNIZE_SPEECH); // ACTION_WEB_SEARCH
                   intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.US.toString() );                  
+                  intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1);
                   intent.putExtra(
                           RecognizerIntent.EXTRA_PROMPT,
                           "VoiceRecognitionTest"); // お好きな文字に変更できます
@@ -35,7 +36,7 @@ public class PronounceExecution extends Activity {
                   startActivityForResult(intent, REQUEST_CODE);
               } catch (ActivityNotFoundException e) {
                   // このインテントに応答できるアクティビティがインストールされていない場合
-                  Toast.makeText(PronounceExecution.this,
+                  Toast.makeText(PronounceExecutionActivity.this,
                       "ActivityNotFoundException", Toast.LENGTH_LONG).show();
               }
     	  }
@@ -47,20 +48,16 @@ public class PronounceExecution extends Activity {
         // 自分が投げたインテントであれば応答する
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
             String resultsString = "";
-            
             // 結果文字列リスト
             ArrayList<String> results = data.getStringArrayListExtra(
                     RecognizerIntent.EXTRA_RESULTS);
-            
             for (int i = 0; i< results.size(); i++) {
                 // ここでは、文字列が複数あった場合に結合しています
                 resultsString += results.get(i);
             }
-            
             // トーストを使って結果を表示
             Toast.makeText(this, resultsString, Toast.LENGTH_LONG).show();
         }
-        
         super.onActivityResult(requestCode, resultCode, data);
     }	
 	

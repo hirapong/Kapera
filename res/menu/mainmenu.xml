@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="@string/menu_item_submenu" android:id="@+id/menu_item_submenu"></item>
+    <item android:title="@string/menu_item_wordlist" android:id="@+id/menu_item_wordlist"></item>
     <item android:title="@string/menu_item_pronounce" android:id="@+id/menu_item_pronounce"></item>
 </menu>

@@ -13,12 +13,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="KaperaSubActivity">
+        <activity android:name=".WordListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>
             </intent-filter>
         </activity>
-        <activity android:name="PronounceExecution">
+        <activity android:name=".PronounceExecutionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>
             </intent-filter>
