@@ -24,7 +24,7 @@ public class KaperaSubActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch ( item.getItemId() )
 		{
-			case R.id.menu_goto:
+			case R.id.menu_item_submenu:
 			{
 				Intent intent = new Intent( this, KaperaActivity.class );
 				startActivity( intent );

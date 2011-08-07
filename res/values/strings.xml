@@ -4,5 +4,7 @@
     <string name="app_name">Kapera</string>
     <string name="main_title">MainTitle</string>
     <string name="menu_goto">メニューへ移動</string>
-    <string name="menu_gotosub">サブメニューへ移動</string>
+    <string name="menu_item_submenu">サブメニューへ移動</string>
+    <string name="menu_item_pronounce">発音する</string>
+    <string name="activity_pronounce_ececute_title">発音してください！</string>
 </resources>

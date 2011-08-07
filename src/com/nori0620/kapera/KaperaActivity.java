@@ -33,8 +33,13 @@ public class KaperaActivity extends Activity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
     	switch ( item.getItemId() ) {
-    		case R.id.menu_goto: {
+    		case R.id.menu_item_submenu: {
     		Intent intent = new Intent( KaperaActivity.this, KaperaSubActivity.class );
+    			startActivity( intent );
+    			return true;
+    		}
+    		case R.id.menu_item_pronounce: {
+    		Intent intent = new Intent( KaperaActivity.this, PronounceExecution.class );
     			startActivity( intent );
     			return true;
     		}
