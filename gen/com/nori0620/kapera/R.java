@@ -15,11 +15,12 @@ public final class R {
         public static final int icon_kapera=0x7f020001;
     }
     public static final class id {
-        public static final int ListView01=0x7f060002;
-        public static final int button1=0x7f060001;
-        public static final int editText1=0x7f060000;
-        public static final int menu_item_pronounce=0x7f060004;
-        public static final int menu_item_submenu=0x7f060003;
+        public static final int ListView01=0x7f060003;
+        public static final int button1=0x7f060002;
+        public static final int editText1=0x7f060001;
+        public static final int layout_pronounce_exec_buttton=0x7f060000;
+        public static final int menu_item_pronounce=0x7f060005;
+        public static final int menu_item_submenu=0x7f060004;
     }
     public static final class layout {
         public static final int activity_pronounce_execution=0x7f030000;

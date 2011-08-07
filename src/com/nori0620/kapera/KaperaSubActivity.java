@@ -19,6 +19,7 @@ public class KaperaSubActivity extends Activity {
 		= new ArrayAdapter<String>( this, R.layout.plain_list_item, data ); 
 		ListView list = (ListView)findViewById( R.id.ListView01);
 		list.setAdapter( arrayAdapter );
+		
 	}
 	
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -33,5 +34,4 @@ public class KaperaSubActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}	
-	
 }
