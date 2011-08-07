@@ -15,7 +15,7 @@ public final class R {
         public static final int icon_kapera=0x7f020001;
     }
     public static final class id {
-        public static final int ListView01=0x7f060001;
+        public static final int WordList=0x7f060001;
         public static final int layout_pronounce_exec_buttton=0x7f060000;
         public static final int menu_item_pronounce=0x7f060003;
         public static final int menu_item_wordlist=0x7f060002;
