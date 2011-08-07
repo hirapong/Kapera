@@ -8,5 +8,9 @@
         <requestFocus></requestFocus>
     </EditText>
     <Button android:text="Button" android:id="@+id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    
+    <ListView
+		android:id="@+id/ListView01"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+	</ListView>
 </LinearLayout>

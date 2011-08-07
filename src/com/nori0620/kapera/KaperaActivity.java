@@ -3,9 +3,12 @@ package com.nori0620.kapera;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
+//import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+//import android.view.View;
+//import android.view.View.OnClickListener;
 import android.view.Window;
 
 public class KaperaActivity extends Activity {
@@ -19,6 +22,25 @@ public class KaperaActivity extends Activity {
         setContentView(R.layout.main);
     	getWindow().setFeatureDrawableResource( Window.FEATURE_LEFT_ICON, R.drawable.icon );
     }
+   
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu( menu );
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate( R.menu.mainmenu, menu );
+        return true;
+    } 
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch ( item.getItemId() ) {
+    		case R.id.menu_goto: {
+    		Intent intent = new Intent( KaperaActivity.this, KaperaSubActivity.class );
+    			startActivity( intent );
+    			return true;
+    		}
+    	}
+    	return super.onOptionsItemSelected(item);
+    }  
     
 
 //    OnClickListener mBackListener = new OnClickListener() {
@@ -38,9 +60,6 @@ public class KaperaActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        Intent intent = new Intent( KaperaActivity.this, KaperaSubActivity.class );
-        startActivity( intent );
-        Log.d( "Kapera", "hello!! new paaause" );
     }
     
     
