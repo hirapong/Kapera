@@ -17,6 +17,8 @@ public class PronounceExecutionActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent received = getIntent();
+        setTitle( received.getStringExtra("WORD") );
         setContentView(R.layout.activity_pronounce_execution);
         Button button = (Button) findViewById( R.id.layout_pronounce_exec_buttton);
         Log.d("Kapera",button.toString());
@@ -39,6 +41,7 @@ public class PronounceExecutionActivity extends Activity {
           }
         });
     }
+    
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
