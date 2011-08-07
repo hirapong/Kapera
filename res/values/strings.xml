@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, KaperaActivity!</string>
+    <string name="hello">おはよう!!!!</string>
     <string name="app_name">Kapera</string>
+    <string name="main_title">MainTitle</string>
 </resources>
