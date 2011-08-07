@@ -33,16 +33,16 @@ public class KaperaActivity extends Activity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch ( item.getItemId() ) {
-        case R.id.menu_item_wordlist: {
-            Intent intent = new Intent( KaperaActivity.this, WordListActivity.class );
-            startActivity( intent );
-            return true;
-        }
-        case R.id.menu_item_pronounce: {
-            Intent intent = new Intent( KaperaActivity.this, PronounceExecutionActivity.class );
-            startActivity( intent );
-            return true;
-        }
+            case R.id.menu_item_wordlist: {
+                Intent intent = new Intent( KaperaActivity.this, WordListActivity.class );
+                startActivity( intent );
+                return true;
+            }
+            case R.id.menu_item_pronounce: {
+                Intent intent = new Intent( KaperaActivity.this, PronounceExecutionActivity.class );
+                startActivity( intent );
+                return true;
+            }
         }
         return super.onOptionsItemSelected(item);
     }  

@@ -7,4 +7,5 @@
     <string name="menu_item_wordlist">単語一覧へ</string>
     <string name="menu_item_pronounce">発音する</string>
     <string name="activity_pronounce_ececute_title">発音してください！</string>
+    <string name="activity_pronounce_result_title">結果</string>
 </resources>

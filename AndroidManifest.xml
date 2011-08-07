@@ -23,6 +23,11 @@
                 <action android:name="android.intent.action.MAIN"></action>
             </intent-filter>
         </activity>
+        <activity android:name=".PronounceResultActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+            </intent-filter>
+        </activity>
 
     </application>
 </manifest>

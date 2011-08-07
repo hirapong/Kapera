@@ -30,9 +30,8 @@ public class WordListActivity extends Activity {
         public void onItemClick(AdapterView<?> adapter,View view, int position, long id) {
             TextView text = (TextView)view;
             Intent intent = new Intent( WordListActivity.this, PronounceExecutionActivity.class );
-            intent.putExtra( "WORD", text.getText() );
+            intent.putExtra( "KAPERA_PRONOUNCE_WORD", text.getText() );
             startActivity( intent ); 
-//            Toast.makeText(WordListActivity.this, text.getText(), Toast.LENGTH_LONG).show();
         }
     }  
     
