@@ -5,7 +5,7 @@
       android:versionName="1.0">
     <uses-sdk android:minSdkVersion="8" />
 
-    <application android:label="@string/app_name" android:icon="@drawable/icon_kapera">
+    <application android:label="@string/app_name" android:icon="@drawable/icon_kapera" android:theme="@android:style/Theme.Light">
         <activity android:name=".KaperaActivity"
                   android:label="@string/app_name">
             <intent-filter>

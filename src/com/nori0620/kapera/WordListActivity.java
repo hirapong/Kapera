@@ -17,7 +17,7 @@ public class WordListActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_list);
-        String[] data = {"but", "bat", "bot"}; 
+        String[] data = {"but", "bat", "bot", "right", "light"}; 
         ArrayAdapter<String> arrayAdapter
             = new ArrayAdapter<String>( this, R.layout.plain_list_item, data ); 
         ListView list = (ListView)findViewById( R.id.WordList );

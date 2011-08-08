@@ -9,6 +9,6 @@
     android:layout_height="wrap_content" 
     android:text="@string/activity_pronounce_ececute_title"
 />
-<Button android:text="Button" android:id="@+id/layout_pronounce_exec_buttton" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>  
+<Button android:layout_height="wrap_content" android:id="@+id/layout_pronounce_exec_buttton" android:text="Button" android:layout_width="84dp"></Button>  
   
 </LinearLayout>

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,13 +21,16 @@ public class PronounceResultActivity extends Activity {
         setTitle( word + "ÇÃî≠âπåãâ " );
         setContentView(R.layout.activity_pronounce_result);
         
-        TextView mainText  = (TextView)findViewById( R.id.PronounceResultMain  ); 
+        ImageView resultIcon  = (ImageView)findViewById( R.id.PronounceResultIcon  ); 
+        TextView  resultTitle = (TextView) findViewById( R.id.PronounceResultTitle ); 
         TextView inputText = (TextView)findViewById( R.id.PronounceResultInput ); 
         if( input.equals(word) ){
-            mainText.setText("Åõ");
+            resultIcon.setImageDrawable( getResources().getDrawable( R.drawable.icon_correct ));
+            resultTitle.setText( "ê≥â" );
         }
         else{
-            mainText.setText("X");
+            resultIcon.setImageDrawable( getResources().getDrawable( R.drawable.icon_incorrect));
+            resultTitle.setText( "ä‘à·Ç¢" );
         }
         inputText.setText( input );
         

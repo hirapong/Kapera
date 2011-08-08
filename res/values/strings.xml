@@ -8,4 +8,5 @@
     <string name="menu_item_pronounce">発音する</string>
     <string name="activity_pronounce_ececute_title">発音してください！</string>
     <string name="activity_pronounce_result_title">結果</string>
+    <string name="activity_pronounce_result_your_input"><u>あなたの発音</u></string>
 </resources>
