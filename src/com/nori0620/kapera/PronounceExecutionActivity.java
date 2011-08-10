@@ -8,9 +8,11 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+//import android.speech.tts.TextToSpeech;
+//import android.speech.tts.TextToSpeech.OnInitListener;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 public class PronounceExecutionActivity extends Activity {
     private static final int REQUEST_CODE = 0;
@@ -21,9 +23,11 @@ public class PronounceExecutionActivity extends Activity {
         String word =  received.getStringExtra("KAPERA_PRONOUNCE_WORD");
         setTitle( word + "の発音チェック" );
         setContentView(R.layout.activity_pronounce_execution);
-        Button button = (Button) findViewById( R.id.layout_pronounce_exec_buttton);
-        Log.d("Kapera",button.toString());
-        button.setOnClickListener(new View.OnClickListener() {
+        ImageButton pronounceButton = (ImageButton) findViewById( R.id.layout_pronounce_exec_buttton);
+//        ImageButton hearButton = (ImageButton) findViewById( R.id.layout_pronounce_hear_buttton);
+        
+        Log.d("Kapera",pronounceButton.toString());
+        pronounceButton.setOnClickListener(new View.OnClickListener() {
           private String word;
           public View.OnClickListener setWord( String word ){
               this.word = word;
@@ -42,6 +46,8 @@ public class PronounceExecutionActivity extends Activity {
                       "発音してみよう!"
                   );
                   
+//                  Toast.makeText(this, "テスト", Toast.LENGTH_LONG).show();                  
+                  
                   startActivityForResult(intent, REQUEST_CODE);
               } catch (ActivityNotFoundException e) {
                   Toast.makeText(PronounceExecutionActivity.this,
@@ -49,6 +55,25 @@ public class PronounceExecutionActivity extends Activity {
               }
           }
         }.setWord(word));
+        
+//        TextToSpeech  textToSpeech =  new TextToSpeech(this, (OnInitListener) this);
+//        hearButton.setOnClickListener(new View.OnClickListener() {
+//            private TextToSpeech textToSpeech;
+//            private String word;
+//            public View.OnClickListener setTextToSpeech( TextToSpeech textToSpeech, String word){
+//                this.textToSpeech = textToSpeech;
+//                this.word         = word;
+//                return this;
+//            }            
+//              public void onClick(View v) {
+//                  try {
+//                      this.textToSpeech.speak(this.word , TextToSpeech.QUEUE_FLUSH, null); 
+//                  } catch (ActivityNotFoundException e) {
+//                      Toast.makeText(PronounceExecutionActivity.this,
+//                          "ActivityNotFoundException", Toast.LENGTH_LONG).show();
+//                  }
+//              }
+//            }.setTextToSpeech( textToSpeech, word) );
     }
     
     @Override

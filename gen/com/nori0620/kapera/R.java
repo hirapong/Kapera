@@ -17,11 +17,14 @@ public final class R {
         public static final int red=0x7f040000;
     }
     public static final class drawable {
-        public static final int content_box=0x7f020000;
-        public static final int icon=0x7f020001;
-        public static final int icon_correct=0x7f020002;
-        public static final int icon_incorrect=0x7f020003;
-        public static final int icon_kapera=0x7f020004;
+        public static final int button_do_pronounce=0x7f020000;
+        public static final int button_hear_pronounce=0x7f020001;
+        public static final int button_retry_pronounce=0x7f020002;
+        public static final int content_box=0x7f020003;
+        public static final int icon=0x7f020004;
+        public static final int icon_correct=0x7f020005;
+        public static final int icon_incorrect=0x7f020006;
+        public static final int icon_kapera=0x7f020007;
     }
     public static final class id {
         public static final int PronounceResultIcon=0x7f070001;
