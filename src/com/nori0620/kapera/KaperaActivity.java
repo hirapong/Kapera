@@ -7,20 +7,34 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 //import android.view.View;
 //import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class KaperaActivity extends Activity {
-    
+    public Activity ownActivity = this;
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
+        this.ownActivity = this;
         super.onCreate(savedInstanceState);
     	setTitle( R.string.main_title );
     	getWindow().requestFeature(Window.FEATURE_LEFT_ICON);
         setContentView(R.layout.main);
     	getWindow().setFeatureDrawableResource( Window.FEATURE_LEFT_ICON, R.drawable.icon );
+    	
+        Button pronounceButton = (Button) findViewById( R.id.button_select_word);
+        pronounceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                  Intent intent = new Intent( KaperaActivity.this, WordListActivity.class );
+                  startActivity( intent );
+            }
+        });
+    	
+    	
     }
    
     @Override

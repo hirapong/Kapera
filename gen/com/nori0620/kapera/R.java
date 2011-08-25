@@ -27,13 +27,16 @@ public final class R {
         public static final int icon_kapera=0x7f020007;
     }
     public static final class id {
+        public static final int PronounceResultContainer=0x7f070000;
         public static final int PronounceResultIcon=0x7f070001;
         public static final int PronounceResultInput=0x7f070003;
         public static final int PronounceResultTitle=0x7f070002;
-        public static final int WordList=0x7f070004;
-        public static final int layout_pronounce_exec_buttton=0x7f070000;
-        public static final int menu_item_pronounce=0x7f070006;
-        public static final int menu_item_wordlist=0x7f070005;
+        public static final int WordList=0x7f070006;
+        public static final int button_select_word=0x7f070007;
+        public static final int layout_pronounce_exec_buttton=0x7f070004;
+        public static final int layout_pronounce_hear_buttton=0x7f070005;
+        public static final int menu_item_pronounce=0x7f070009;
+        public static final int menu_item_wordlist=0x7f070008;
     }
     public static final class layout {
         public static final int activity_pronounce_execution=0x7f030000;
