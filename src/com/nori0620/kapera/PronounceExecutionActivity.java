@@ -76,7 +76,7 @@ public class PronounceExecutionActivity extends Activity implements  TextToSpeec
             for (int i = 0; i< results.size(); i++) {
                 userInput += results.get(i);
             }
-            Intent intent = new Intent( PronounceExecutionActivity.this, PronounceResultActivity.class );
+            Intent intent = new Intent( PronounceExecutionActivity.this, PronounceExecutionActivity.class );
             intent.putExtra( "KAPERA_PRONOUNCE_WORD", word );
             intent.putExtra( "KAPERA_PRONOUNCE_INPUT", userInput );
             this.word = word;
